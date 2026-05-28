@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeuGanho | Leitura local de ofertas para motoristas</title>
+  <meta name="description" content="Homepage publica do MeuGanho: leitura local de ofertas, semaforo de viabilidade, historico local e politica de privacidade acessivel.">
+  <meta name="theme-color" content="#080c0f">
+  <meta property="og:title" content="MeuGanho | Leitura local de ofertas para motoristas">
+  <meta property="og:description" content="Leitura local de ofertas, semaforo de viabilidade, historico local e politica de privacidade publica.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MeuGanho">
+  <meta name="twitter:description" content="Leitura local de ofertas e politica de privacidade publica.">
+  <meta name="twitter:image" content="./assets/og-image.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo-16.png">
+  <link rel="shortcut icon" href="./assets/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo-180.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="site-shell header-row">
+      <a class="brand" href="./index.html">
+        <img class="brand-logo" src="./assets/logo-64.png" alt="Logo do MeuGanho">
+        <span>
+          <strong>MeuGanho</strong>
+          <small>Leitura local para motoristas</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#funciona">Como funciona</a>
+        <a href="#privacidade">Privacidade</a>
+        <a href="./privacy/index.html">Politica</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-gap">
+      <div class="site-shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Plataforma publica do app MeuGanho</p>
+          <div class="hero-brandline">
+            <img class="hero-logo" src="./assets/logo-64.png" alt="Logo do MeuGanho">
+            <span>Identidade visual oficial do app</span>
+          </div>
+          <h1>Leitura local de ofertas com semaforo claro antes de aceitar.</h1>
+          <p class="hero-text">
+            O MeuGanho ajuda motoristas a interpretar ofertas exibidas em apps monitorados,
+            calcular viabilidade da corrida no proprio dispositivo e manter contexto operacional
+            sem depender de envio para servidores.
+          </p>
+          <div class="hero-chips" aria-label="Destaques do app">
+            <span class="chip chip-emerald">100% on-device</span>
+            <span class="chip">Sem anuncios</span>
+            <span class="chip">Historico local</span>
+            <span class="chip">OCR com fallback local</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./privacy/index.html">Abrir politica de privacidade</a>
+            <a class="button button-secondary" href="#sobre">Entender o app</a>
+          </div>
+        </div>
+
+        <aside class="offer-panel surface-card" aria-label="Painel ilustrativo do MeuGanho">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">Semaforo local de viabilidade</p>
+              <h2>Oferta analisada no aparelho</h2>
+            </div>
+            <span class="status-pill status-green">Local</span>
+          </div>
+
+          <div class="offer-route">
+            <div class="route-dot route-origin"></div>
+            <div>
+              <strong>Embarque</strong>
+              <span>Conteudo visivel da oferta</span>
+            </div>
+          </div>
+          <div class="offer-route offer-route-destination">
+            <div class="route-dot route-destination"></div>
+            <div>
+              <strong>Destino</strong>
+              <span>Contexto operacional local</span>
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card">
+              <span class="signal signal-green" aria-hidden="true"></span>
+              <strong>R$ 2,85</strong>
+              <span>por km</span>
+            </article>
+            <article class="metric-card">
+              <span class="signal signal-green" aria-hidden="true"></span>
+              <strong>R$ 41,20</strong>
+              <span>por hora</span>
+            </article>
+            <article class="metric-card">
+              <span class="signal signal-amber" aria-hidden="true"></span>
+              <strong>4,78</strong>
+              <span>nota lida</span>
+            </article>
+          </div>
+
+          <div class="panel-footer">
+            <span>Leitura visivel -> OCR local -> calculo -> overlay/notificacao</span>
+            <span>Nenhum toque em nome do usuario</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre" class="section-gap">
+      <div class="site-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Sobre o MeuGanho</p>
+          <h2>Uma interface de bordo para decidir com mais contexto.</h2>
+          <p>
+            O app trabalha no ponto onde valor, distancia, tempo e risco operacional se cruzam:
+            tela escura, leitura rapida, semaforo direto e dados locais. Nada de painel inflado;
+            a proposta e mostrar apenas o que ajuda antes da aceitacao.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="surface-card feature-card">
+            <span class="feature-tag">Leitura</span>
+            <h3>Conteudo visivel da oferta</h3>
+            <p>
+              Usa Accessibility Service para ler o que ja esta na tela do motorista e,
+              quando necessario, captura local para OCR no proprio aparelho.
+            </p>
+          </article>
+
+          <article class="surface-card feature-card">
+            <span class="feature-tag">Calculo</span>
+            <h3>Semaforo de viabilidade</h3>
+            <p>
+              Resume a oferta em R$/km, R$/h, nota do passageiro e classificacao visual
+              verde, amarela ou vermelha para leitura rapida.
+            </p>
+          </article>
+
+          <article class="surface-card feature-card">
+            <span class="feature-tag">Memoria local</span>
+            <h3>Historico e contexto operacional</h3>
+            <p>
+              Mantem historico local das corridas lidas, notificacoes com resumo da ultima oferta
+              e dados persistidos no proprio dispositivo do usuario.
+            </p>
+          </article>
+
+          <article class="surface-card feature-card">
+            <span class="feature-tag">Dashcam</span>
+            <h3>Camera Discreta opcional</h3>
+            <p>
+              Grava video localmente em <code>Movies/MeuGanho</code>, com retencao configuravel,
+              overlay de acompanhamento e controles separados do fluxo principal de leitura.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciona" class="section-gap">
+      <div class="site-shell workflow-layout">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Fluxo curto, local e orientado a decisao.</h2>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="surface-card workflow-card">
+            <span class="workflow-index">01</span>
+            <h3>Oferta detectada</h3>
+            <p>O app observa o conteudo visivel do app monitorado enquanto o usuario mantem o monitoramento ativo.</p>
+          </article>
+
+          <article class="surface-card workflow-card">
+            <span class="workflow-index">02</span>
+            <h3>Extracao no aparelho</h3>
+            <p>Valor, distancia, tempo, nota e enderecos sao tratados localmente, com OCR apenas quando a arvore nao basta.</p>
+          </article>
+
+          <article class="surface-card workflow-card">
+            <span class="workflow-index">03</span>
+            <h3>Resposta imediata</h3>
+            <p>O usuario recebe overlay, notificacao e historico local sem automacao de toques, sem nuvem e sem repasse a terceiros.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidade" class="section-gap">
+      <div class="site-shell privacy-banner surface-card">
+        <div>
+          <p class="eyebrow">Privacidade publica</p>
+          <h2>Politica pronta para link direto.</h2>
+          <p>
+            Esta home inclui uma pagina dedicada de politica de privacidade com linguagem publica,
+            foco em processamento local e explicacao objetiva do uso de acessibilidade, overlay,
+            notificacoes e camera discreta.
+          </p>
+        </div>
+        <div class="privacy-actions">
+          <a class="button button-primary" href="./privacy/index.html">Ler politica completa</a>
+          <a class="button button-secondary" href="mailto:rangelacme@gmail.com">Contato de privacidade</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-row">
+      <div>
+        <strong>MeuGanho</strong>
+        <p>Leitura local, decisao rapida e politica publica acessivel.</p>
+      </div>
+      <div class="footer-links">
+          <a href="./privacy/index.html">Politica de privacidade</a>
+        <a href="mailto:rangelacme@gmail.com">rangelacme@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
