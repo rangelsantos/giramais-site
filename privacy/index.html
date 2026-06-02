@@ -126,7 +126,7 @@
         <h2>3. Por que o Accessibility Service e necessario</h2>
         <p>
           Os apps monitorados nao fornecem API publica, webhook ou integracao oficial para entregar ao MeuGanho,
-          em tempo real, os campos estruturados da oferta exibida ao motorista.
+          em tempo real, os campos estruturados da oferta exibida ao proprio usuario autenticado.
         </p>
         <ul class="policy-list">
           <li>O app le localmente apenas o conteudo visivel da oferta mostrada ao proprio usuario autenticado.</li>
@@ -165,7 +165,7 @@
           </article>
           <article class="policy-item">
             <h3>POST_NOTIFICATIONS</h3>
-            <p>Mostrar notificacoes persistentes de servico e resumo local da ultima corrida calculada.</p>
+            <p>Mostrar notificacoes persistentes de servico e resumo local da ultima oferta calculada.</p>
           </article>
           <article class="policy-item">
             <h3>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS e WAKE_LOCK</h3>
@@ -177,7 +177,7 @@
       <section id="retencao" class="policy-section surface-card">
         <h2>5. Armazenamento e retencao</h2>
         <ul class="policy-list">
-          <li><strong>Historico de corridas:</strong> ate 500 registros locais com remocao automatica dos mais antigos.</li>
+          <li><strong>Historico de ofertas:</strong> ate 500 registros locais com remocao automatica dos mais antigos.</li>
           <li><strong>Banco local de historico:</strong> dados consolidados da oferta, como valor, distancia, tempo, nota e enderecos visiveis.</li>
           <li><strong>Catalogo local da camera:</strong> metadados de videos gravados para listagem, limpeza e retencao local.</li>
           <li><strong>Logs de debug:</strong> arquivos rotativos no armazenamento interno, com limite aproximado de 10 MB no total.</li>
@@ -191,7 +191,7 @@
         <h2>6. Enderecos, contexto operacional e navegacao</h2>
         <p>
           Os enderecos mantidos pelo MeuGanho sao os mesmos enderecos e pontos de rota que ja aparecem visualmente
-          para o motorista na oferta monitorada.
+          para o proprio usuario na oferta monitorada.
         </p>
         <ul class="policy-list">
           <li>O app nao enriquece localizacao com bases externas, agenda, mapas de terceiros ou GPS em segundo plano.</li>

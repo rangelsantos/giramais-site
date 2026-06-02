@@ -17,6 +17,8 @@
 ## Domain Behavior Guardrails
 1. **[2026-05-28] Public privacy text must match app behavior**
    Do instead: keep accessibility, OCR fallback, local-only processing, and dashcam retention language aligned with `meuganho/` code and docs.
+2. **[2026-06-02] Public site copy must stay offer-neutral**
+   Do instead: on `meuganho-site/`, prefer `oferta`, `apps monitorados`, and `usuario` wording over `corrida` or `motorista` when text should cover both ride and delivery flows.
 
 ## User Directives
 1. **[2026-05-28] Site mirrors MeuGanho Emerald identity**
