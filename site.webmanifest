@@ -1,7 +1,7 @@
 {
-  "name": "MeuGanho",
-  "short_name": "MeuGanho",
-  "description": "Homepage publica e politica de privacidade do app MeuGanho.",
+  "name": "Gira Mais",
+  "short_name": "Gira Mais",
+  "description": "Homepage publica e politica de privacidade do app Gira Mais.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#080c0f",
