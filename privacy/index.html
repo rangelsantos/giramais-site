@@ -51,7 +51,8 @@
           <p class="eyebrow">Politica publica do app</p>
           <h1>Politica de Privacidade do Gira Mais</h1>
           <p>
-            Ultima atualizacao: <strong>6 de julho de 2026</strong>.
+            Ultima atualizacao: <strong>23 de julho de 2026</strong>.
+            Versao da politica: <strong>2026-07-23</strong>.
             Esta pagina descreve como o Gira Mais trata dados locais do usuario,
             quais permissoes solicita e em que condicoes usa acessibilidade,
             OCR, overlay, notificacoes e camera discreta.
@@ -59,8 +60,8 @@
         </div>
         <div class="hero-chips" aria-label="Resumo da politica">
           <span class="chip chip-emerald">Processamento local</span>
-          <span class="chip">Sem envio para servidores</span>
-          <span class="chip">Sem anuncios ou analytics</span>
+          <span class="chip">OCR local; telemetria tecnica via HTTPS</span>
+          <span class="chip">Sem anuncios ou monetizacao</span>
           <span class="chip">Link direto para Play Store</span>
         </div>
       </section>
@@ -80,8 +81,9 @@
       <section id="dados" class="policy-section surface-card">
         <h2>1. Dados tratados pelo app</h2>
         <p>
-          O Gira Mais processa dados locais no dispositivo para executar as funcoes ativadas pelo usuario.
-          O app nao depende de envio para servidores para calcular indicadores ou exibir resultados.
+          O Gira Mais processa localmente os dados necessarios para as funcoes ativadas pelo usuario.
+          O app nao depende de servidores para calcular indicadores ou exibir resultados. O SDK ML Kit
+          coleta telemetria operacional limitada, descrita separadamente abaixo.
         </p>
         <div class="policy-grid three-up">
           <article class="policy-item">
@@ -116,14 +118,19 @@
             <h3>Zonas de risco</h3>
             <p>Localidades cadastradas pelo usuario sao comparadas localmente com inicio e destino para exibir alerta no balao.</p>
           </article>
+          <article class="policy-item">
+            <h3>Telemetria operacional do ML Kit</h3>
+            <p>Para diagnostico e analise de uso do SDK, o ML Kit envia via HTTPS dados tecnicos de dispositivo/app, identificador por instalacao, desempenho, configuracao da API, tamanhos, eventos e erros. Imagens, texto OCR e resultados nao sao enviados ao Google.</p>
+          </article>
         </div>
       </section>
 
       <section id="nao-fazemos" class="policy-section surface-card">
         <h2>2. O que o Gira Mais nao faz</h2>
         <ul class="policy-list">
-          <li>Nao envia dados para servidores para calcular, armazenar ou classificar ofertas.</li>
-          <li>Nao compartilha dados com terceiros para anuncios, analytics ou monetizacao.</li>
+          <li>Nao envia imagens, audio, videos, texto OCR, ofertas, enderecos, historico ou configuracoes financeiras para servidores do Gira Mais.</li>
+          <li>Nao compartilha dados automaticamente. Videos so saem do app quando o usuario aciona "Compartilhar"; enderecos so abrem em outro app por acao direta do usuario.</li>
+          <li>Nao usa SDKs dedicados a anuncios, analytics ou monetizacao. O ML Kit envia somente telemetria tecnica para diagnostico e analise de uso do proprio SDK; segundo o fornecedor, via HTTPS e sem transferencia a terceiros.</li>
           <li>Nao executa toques, gestos, digitacao, scroll ou navegacao em nome do usuario nos apps monitorados.</li>
           <li>Nao coleta GPS em segundo plano para enriquecer os enderecos lidos das ofertas.</li>
           <li>Nao acessa contas bancarias nem informacoes de pagamento alem do que ja aparece visualmente na oferta.</li>
@@ -153,19 +160,15 @@
           </article>
           <article class="policy-item">
             <h3>SYSTEM_ALERT_WINDOW</h3>
-            <p>Exibir overlay de resultado, icone flutuante de monitoramento e overlay de acompanhamento da camera discreta.</p>
+            <p>Exibir o monitoramento flutuante iniciado pelo usuario e, opcionalmente, a miniatura da camera. A gravacao funciona sem esta permissao.</p>
           </article>
           <article class="policy-item">
             <h3>CAMERA e RECORD_AUDIO</h3>
-            <p>Habilitar a gravacao opcional da Camera Discreta para video e audio do ambiente veicular.</p>
-          </article>
-          <article class="policy-item">
-            <h3>READ_MEDIA_VIDEO / READ_MEDIA_VISUAL_USER_SELECTED</h3>
-            <p>Ler e gerenciar localmente os videos gravados pelo proprio app no Android moderno.</p>
+            <p>Gravar video e audio ambiente, inclusive enquanto o app nao esta visivel. Antes do primeiro pedido, um disclosure separado informa destino, retencao, exclusao, notificacao persistente, controle para parar e compartilhamento somente iniciado pelo usuario.</p>
           </article>
           <article class="policy-item">
             <h3>READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE</h3>
-            <p>Leitura local dos videos gravados pelo proprio app no Android 10 a 12L e salvamento legado de capturas automaticas no Android 9 ou inferior.</p>
+            <p>Uso legado apenas no Android 9 ou inferior. No Android 10+, o app usa somente as URIs que criou no MediaStore, sem permissao ampla de fotos e videos.</p>
           </article>
           <article class="policy-item">
             <h3>FOREGROUND_SERVICE e variantes reais</h3>
@@ -173,11 +176,11 @@
           </article>
           <article class="policy-item">
             <h3>POST_NOTIFICATIONS</h3>
-            <p>Mostrar notificacoes persistentes de servico e resumo local da ultima oferta calculada.</p>
+            <p>Mostrar notificacoes persistentes e resumos locais. A recusa nao bloqueia monitoramento nem gravacao.</p>
           </article>
           <article class="policy-item">
-            <h3>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS e WAKE_LOCK</h3>
-            <p>Reduzir pausas agressivas do sistema e preservar gravacao continua na camera discreta.</p>
+            <h3>WAKE_LOCK e otimizacao de bateria</h3>
+            <p>WAKE_LOCK ajuda a preservar a gravacao. A isencao de bateria e opcional e gerenciada na tela geral do Android, com instrucoes para aplicar e reverter.</p>
           </article>
         </div>
       </section>
@@ -187,12 +190,13 @@
         <ul class="policy-list">
           <li><strong>Historico de ofertas:</strong> ate 500 registros locais com remocao automatica dos mais antigos.</li>
           <li><strong>Banco local de historico:</strong> dados consolidados da oferta, como valor, distancia, tempo, nota, enderecos visiveis e lucro calculado.</li>
-          <li><strong>Catalogo local da camera:</strong> metadados de videos gravados para listagem, limpeza e retencao local.</li>
-          <li><strong>Logs de debug:</strong> arquivos rotativos no armazenamento interno, com limite aproximado de 10 MB no total.</li>
+          <li><strong>Catalogo local da camera:</strong> metadados e URIs criadas pelo app; listagem, reproducao, exclusao e retencao usam somente esse catalogo.</li>
+          <li><strong>Logs de debug:</strong> um arquivo ativo e ate 5 arquivos rotativos, com cerca de 2 MiB cada e limite nominal aproximado de 12 MiB; os mais antigos sao removidos na rotacao.</li>
           <li><strong>Capturas automaticas:</strong> salvas em <code>Pictures/GiraMais</code> apenas se o usuario ativar explicitamente essa funcao.</li>
           <li><strong>Videos da Camera Discreta:</strong> salvos em <code>Movies/GiraMais</code>, com retencao configuravel e limpeza local.</li>
           <li><strong>Zonas de risco:</strong> nomes cadastrados pelo usuario ficam em preferencias locais no armazenamento interno do app.</li>
           <li><strong>Lucratividade:</strong> custos e limites informados pelo usuario ficam em preferencias locais no armazenamento interno do app.</li>
+          <li><strong>Telemetria do ML Kit:</strong> a retencao e administrada pelo fornecedor. O identificador e vinculado a instalacao e nao foi projetado para identificar unicamente uma pessoa ou dispositivo fisico.</li>
           <li><strong>Backup:</strong> o app nao participa de backup automatico do Google Drive para o conteudo interno gerenciado por ele.</li>
         </ul>
       </section>
@@ -215,7 +219,10 @@
         <h2>7. Direitos do usuario</h2>
         <ul class="policy-list">
           <li><strong>Acessar:</strong> consultar historico e dados mantidos localmente pelo app.</li>
-          <li><strong>Excluir:</strong> limpar historico, remover videos e capturas, ou apagar os dados do app nas configuracoes do Android.</li>
+          <li><strong>Excluir historico:</strong> usar "Limpar" na tela de Historico.</li>
+          <li><strong>Excluir videos:</strong> apagar um item ou todas as gravacoes na galeria da Camera Discreta.</li>
+          <li><strong>Excluir capturas:</strong> apagar imagens de <code>Pictures/GiraMais</code> na galeria do dispositivo.</li>
+          <li><strong>Excluir logs e preferencias:</strong> abrir Configuracoes &gt; Dados &gt; Gerenciar dados do app e limpar os dados do Gira Mais no Android.</li>
           <li><strong>Revogar consentimento:</strong> desativar acessibilidade, revogar permissoes concedidas ou desinstalar o app.</li>
           <li><strong>Retificar:</strong> o historico representa leitura automatica local; o app nao edita retroativamente o que foi detectado na oferta original.</li>
         </ul>
@@ -224,7 +231,8 @@
       <section id="seguranca" class="policy-section surface-card">
         <h2>8. Seguranca</h2>
         <ul class="policy-list">
-          <li>OCR e extracao executados localmente no dispositivo.</li>
+          <li>Imagens, texto e resultados do OCR sao processados localmente e nao sao enviados ao Google.</li>
+          <li>A telemetria operacional do ML Kit e criptografada em transito por HTTPS.</li>
           <li>Preferencias e configuracoes locais do app ficam no armazenamento interno, sob o sandbox do Android.</li>
           <li>Banco local protegido pelo sandbox do Android.</li>
           <li>Screenshots temporarios sao descartados quando a opcao de salvamento automatico nao esta ativada.</li>
