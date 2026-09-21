@@ -580,6 +580,7 @@ ul {
 }
 
 .policy-section {
+  scroll-margin-top: 10rem;
   padding: 1.5rem;
 }
 

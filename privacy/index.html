@@ -51,8 +51,8 @@
           <p class="eyebrow">Politica publica do app</p>
           <h1>Politica de Privacidade do Gira Mais</h1>
           <p>
-            Ultima atualizacao: <strong>14 de setembro de 2026</strong>.
-            Versao da politica: <strong>2026-09-14</strong>.
+            Ultima atualizacao: <strong>18 de setembro de 2026</strong>.
+            Versao da politica: <strong>2026-09-18</strong>.
             Esta pagina descreve como o Gira Mais trata dados locais do usuario,
             quais permissoes solicita e em que condicoes usa acessibilidade,
             OCR, overlay, notificacoes e camera discreta.
@@ -61,7 +61,7 @@
         <div class="hero-chips" aria-label="Resumo da politica">
           <span class="chip chip-emerald">Processamento local</span>
           <span class="chip">OCR local; telemetria tecnica via HTTPS</span>
-          <span class="chip">Sem anuncios ou monetizacao</span>
+          <span class="chip">Plano gratuito com anuncios; Pro sem anuncios</span>
           <span class="chip">Link direto para Play Store</span>
         </div>
       </section>
@@ -69,6 +69,7 @@
       <nav class="policy-nav surface-card" aria-label="Secoes da politica">
         <a href="#dados">Dados tratados</a>
         <a href="#nao-fazemos">O que nao fazemos</a>
+        <a href="#publicidade">Publicidade e consentimento</a>
         <a href="#acessibilidade">Uso de acessibilidade</a>
         <a href="#permissoes">Permissoes</a>
         <a href="#retencao">Retencao e armazenamento</a>
@@ -83,7 +84,7 @@
         <p>
           O Gira Mais processa localmente os dados necessarios para as funcoes ativadas pelo usuario.
           O app nao depende de servidores para calcular indicadores ou exibir resultados. O SDK ML Kit
-          coleta telemetria operacional limitada, descrita separadamente abaixo.
+          coleta telemetria operacional limitada. Google Play Billing, UMP e Google Mobile Ads realizam as comunicacoes externas descritas abaixo.
         </p>
         <div class="policy-grid three-up">
           <article class="policy-item">
@@ -133,12 +134,22 @@
         <h2>2. O que o Gira Mais nao faz</h2>
         <ul class="policy-list">
           <li>Nao envia imagens, audio, videos, texto OCR, ofertas, enderecos, historico ou configuracoes financeiras para servidores do Gira Mais.</li>
-          <li>Nao compartilha dados automaticamente. Videos so saem do app quando o usuario aciona "Compartilhar"; enderecos so abrem em outro app por acao direta do usuario.</li>
-          <li>Nao usa SDKs dedicados a anuncios ou analytics. O Google Play Billing e usado exclusivamente para compras da assinatura; o ML Kit envia somente telemetria tecnica para diagnostico e analise de uso do proprio SDK.</li>
+          <li>Nao envia conteudo de corridas ou midia aos SDKs de publicidade. Videos so saem do app quando o usuario aciona "Compartilhar"; enderecos so abrem em outro app por acao direta do usuario.</li>
+          <li>Nao exibe anuncios no plano Pro nem sobre outros aplicativos. O plano gratuito usa Google AdMob em tela interna; Google Play Billing processa a assinatura e ML Kit usa telemetria operacional propria.</li>
           <li>Nao executa toques, gestos, digitacao, scroll ou navegacao em nome do usuario nos apps monitorados.</li>
           <li>Nao coleta GPS em segundo plano para enriquecer os enderecos lidos das ofertas.</li>
           <li>Nao acessa contas bancarias nem dados de pagamento. A cobranca da assinatura e processada pela Google Play.</li>
         </ul>
+      </section>
+
+      <section id="publicidade" class="policy-section surface-card">
+        <h2>Publicidade e escolhas de privacidade</h2>
+        <p>O plano gratuito oferece cinco leituras iniciais por dia. Ao esgotar o bloco, voce pode escolher assistir a um anuncio premiado para liberar mais cinco leituras, repetindo o ciclo. Fechar o anuncio antes de receber a recompensa nao libera leituras. A cota inicial renova a meia-noite de Sao Paulo; creditos restantes nao acumulam para o dia seguinte. O plano Pro nao exige anuncios.</p>
+        <p>Contador, limite e identificadores locais de recompensa ficam em SharedPreferences para controlar os blocos e impedir concessao duplicada. Sao renovados no novo dia de uso e removidos ao limpar dados do app; nao sao enviados aos anuncios.</p>
+        <p>Anuncios sao permitidos apos verificar o plano gratuito e a autorizacao do UMP. Quando exigido, a mensagem de consentimento aparece antes das requisicoes. As escolhas podem ser alteradas em Configuracoes &gt; Dados &gt; Privacidade dos anuncios quando exigido pelo UMP. Recusar personalizacao pode permitir anuncios limitados conforme a decisao do UMP.</p>
+        <p>O SDK Google Mobile Ads pode coletar e compartilhar IP (com localizacao aproximada derivada), interacoes com app/anuncios, diagnosticos, Advertising ID, App Set ID e outros identificadores de dispositivo/conta aplicaveis. Os dados sao transmitidos por TLS para publicidade, analytics e prevencao a fraude. O Gira Mais nao fornece aos anuncios ofertas, historico, imagens, OCR, enderecos, audio, videos ou configuracoes financeiras.</p>
+        <p>O UMP gerencia escolhas de privacidade no aparelho e em comunicacao com o Google. A retencao dos dados tecnicos de publicidade e administrada pelos fornecedores; o processamento pode ocorrer fora do Brasil. Consulte a <a href="https://policies.google.com/privacy">Politica de Privacidade do Google</a> e <a href="https://policies.google.com/technologies/partner-sites">como o Google usa dados de parceiros</a>. O Advertising ID pode ser redefinido ou excluido no Android. Limpar dados locais nao exclui dados ja tratados pelos fornecedores.</p>
+        <p>Os SDKs utilizam INTERNET e ACCESS_NETWORK_STATE. O SDK de anuncios incorpora AD_ID e a permissao normal READ_BASIC_PHONE_STATE; esta ultima nao autoriza acesso a chamadas, contatos ou audio.</p>
       </section>
 
       <section id="acessibilidade" class="policy-section surface-card">
@@ -228,6 +239,7 @@
           <li><strong>Excluir videos:</strong> apagar um item ou todas as gravacoes na galeria da Camera Discreta.</li>
           <li><strong>Excluir capturas:</strong> apagar imagens de <code>Pictures/GiraMais</code> na galeria do dispositivo.</li>
           <li><strong>Excluir logs e preferencias:</strong> abrir Configuracoes &gt; Dados &gt; Gerenciar dados do app e limpar os dados do Gira Mais no Android.</li>
+          <li><strong>Privacidade dos anuncios:</strong> Configuracoes &gt; Dados &gt; Privacidade dos anuncios, quando exigido pelo UMP; controles de Advertising ID no Android.</li>
           <li><strong>Revogar consentimento:</strong> desativar acessibilidade, revogar permissoes concedidas ou desinstalar o app.</li>
           <li><strong>Retificar:</strong> o historico representa leitura automatica local; o app nao edita retroativamente o que foi detectado na oferta original.</li>
         </ul>
